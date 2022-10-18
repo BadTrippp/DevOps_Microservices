@@ -29,6 +29,7 @@ jobs:
           name: test
           command: |
             pwd
+            ls -la
       - run:
           name: install dependencies
           command: |
