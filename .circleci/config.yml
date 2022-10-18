@@ -42,7 +42,7 @@ jobs:
       - run:
           name: run tests
           command: |
-            . venv/bin/activate
+            . venv/bin/activate 
             make test
       # run lints!
       - run:
