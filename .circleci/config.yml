@@ -25,7 +25,7 @@ jobs:
                   key: v1-pip-deps-{{ checksum "requirements.txt" }}
                   paths:
                       - ~/.devops
-
+ 
             - run:
                   name: Install hadolint
                   command: |
