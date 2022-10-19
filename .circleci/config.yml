@@ -29,6 +29,9 @@ jobs:
           name: install dependencies
           command: |
             cd project-ml-microservice-kubernetes
+            make setup
+            source ~/.devops/bin/activate
+            make install
             sudo wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v2.10.0/hadolint-Linux-x86_64
             sudo pip install --upgrade pip
             python3 -m venv venv
