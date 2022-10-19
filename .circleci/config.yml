@@ -32,13 +32,13 @@ jobs:
             make setup
             source ~/.devops/bin/activate
             make install
-            sudo wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
-            chmod +x /bin/hadolint
             sudo pip install --upgrade pip
             sudo make install-hadolint
             python3 -m venv venv
             . venv/bin/activate
             pip install -r requirements.txt
+            sudo wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
+            sudo chmod +x /bin/hadolint
       # - save_cache:
       #     paths:
       #       - ~/repo/project-ml-microservice-kubernetes
